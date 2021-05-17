@@ -131,7 +131,7 @@ def answer(URL):
     soup = BeautifulSoup(html,'lxml')
     all_text = soup.find_all('p')
     title = soup.find('h1',class_='article__title article__title_layout_redesign article__title_theme_undefined article__title_text-styling_redesign').text #название статьи!!!!
-    date_posting = soup.find('div',class_='article-stats-view-redesign__date').text #        время постинга!!!!
+    date_posting = soup.find('div',class_='article-stats-view-redesign__item').text #        время постинга!!!!
     html_text = soup.find('div',class_='article__middle article__middle_layout_redesign article__middle_theme_undefined article__middle_text-styling_redesign')
     href_text_all = html_text.find_all(href=True) # все блоки которые имеют ссылки
     img_all = html_text.find_all('img') # все html фоток           
